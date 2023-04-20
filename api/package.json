@@ -6,11 +6,15 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/src/server.js",
+    "start": "npm run prisma:migrate && node dist/src/server.js",
     "dev": "tsx watch src/server.ts",
     "prisma:reset": "prisma migrate reset",
     "prisma:migrate": "prisma migrate dev",
-    "test": "jest"
+    "test": "jest",
+    "docker:build": "docker build .",
+    "docker:run": "docker run --name api/passwordgenerator -p 5000:5000 ",
+    "docker:start": "docker start api/passwordgenerator",
+    "docker:stop": "docker stop api/passwordgenerator"
   },
   "repository": {
     "type": "git",

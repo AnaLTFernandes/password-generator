@@ -6,6 +6,7 @@
 - [Rotas](#Rotas)
   - [Criar senha](#Criar-senha)
 - [Como rodar em desenvolvimento](#Como-rodar-em-desenvolvimento)
+- [Como rodar em desenvolvimento com o Docker](#Como-rodar-em-desenvolvimento-com-o-Docker)
 
 <br/>
 
@@ -94,4 +95,36 @@ API do Password Generator.
 
    > ```bash
    > npm run test
+   > ```
+
+<br/>
+
+## Como rodar em desenvolvimento com o Docker
+
+**Atenção:** para rodar o projeto é preciso ter o [Docker](https://docs.docker.com/engine/install/) instalado na sua máquina.
+
+<br/>
+
+1. Configure o projeto seguindo até, pelo menos, o passo 4 da seção [Como rodar em desenvolvimento](#Como-rodar-em-desenvolvimento)
+
+2. Crie a imagem do projeto:
+
+   > ```bash
+   > npm run docker:build
+   > ```
+
+3. Inicie o container Docker:
+
+   > ```bash
+   > # caso seja a primeira vez rodando o projeto no Docker, rode:
+   > npm run docker:run {IMAGE_ID}
+   > # caso contrário, rode:
+   > npm run docker:start
+   > ```
+
+4. Divirta-se nas rotas usando de URL base: `http://localhost:5000`
+
+5. [*Opcional*] Rode o comando para parar o container.
+   > ```bash
+   > npm run docker:stop
    > ```
