@@ -1,19 +1,19 @@
-name: Test Pull Request on GitHub
+name: Test Pull Request on Github
 on: [pull_request]
 jobs:
-	PullRequest-GitHub:
-		runs-on: ubuntu-latest
-		steps:
-			- name: Check out repository code
+  PullRequest-GitHub:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
         uses: actions/checkout@v3
       - name: Make a new envfile
-        users: SpicyPizza/create-envfile@v1.3
+        uses: SpicyPizza/create-envfile@v1.3
         with:
-					envkey_DATABASE_URL=postgresql://postgres:postgres@postgres_db:5432/passwordgenerator
-					envkey_POSTGRES_USERNAME=postgres
-					envkey_POSTGRES_PASSWORD=postgres
-					envkey_POSTGRES_DB=passwordgenerator
-					directory: api
-					file_name: .env.test
-			- name: Run tests
-				run: docker-compose -f docker-compose-test.yml run api npm run test
+          envkey_POSTGRES_USERNAME: "postgres"
+          envkey_POSTGRES_PASSWORD: "postgres"
+          envkey_POSTGRES_DB: "passwordgenerator"
+          envkey_DATABASE_URL: "postgresql://postgres:postgres@postgres_db:5432/passwordgenerator"
+          directory: api
+          file_name: .env.test
+      - name: Run tests
+        run: docker-compose -f docker-compose-test.yml run api npm run test
