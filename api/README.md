@@ -18,6 +18,8 @@ API do Password Generator.
 
 ## Rotas
 
+**URL base**: http://ec2-44-201-243-200.compute-1.amazonaws.com/api
+
 <br/>
 
 ## Criar senha
