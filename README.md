@@ -12,7 +12,7 @@ Site para gerar senhas aleatórias com tamanho entre 1 e 25, o qual é escolhido
 
 ## :hammer_and_wrench: Rodar o projeto
 
-**Atenção:** para rodar o projeto é preciso ter o [Docker e o Docker Compose](https://docs.docker.com/engine/install/) instalado na sua máquina.
+**Atenção:** para rodar o projeto é preciso ter o [Docker](https://docs.docker.com/engine/install/) e o [Docker Compose](https://docs.docker.com/compose/install/) instalado na sua máquina.
 
 1. Clone esse repositório:
 
@@ -25,7 +25,7 @@ Site para gerar senhas aleatórias com tamanho entre 1 e 25, o qual é escolhido
 3. Na raiz da pasta criada, inicie o projeto:
 
    > ```bash
-   > docker-compose up --build -d
+   > docker compose up --build -d
    > ```
 
 4. Acesse http://localhost:80 no seu navegador e aproveite <3
@@ -35,5 +35,5 @@ Site para gerar senhas aleatórias com tamanho entre 1 e 25, o qual é escolhido
 6. [*Opcional*] Encerre o projeto:
 
    > ```bash
-   > docker-compose down
+   > docker compose down
    > ```
