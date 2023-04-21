@@ -4,7 +4,7 @@ Frontend do Password Generator.
 
 <div align=center>
  
-  <img alt="Password Generator preview" src="https://github.com/AnaLTFernandes/password-generator/tree/main/frontend/src/assets/password-generator-preview.png" />
+  <img alt="Password Generator preview" src="https://raw.githubusercontent.com/AnaLTFernandes/password-generator/main/frontend/src/assets/password-generator-preview.png" />
   
 </div>
 
